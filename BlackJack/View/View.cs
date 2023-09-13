@@ -26,9 +26,9 @@ namespace BlackJack.View
         /// print the dealers card or hand.
         /// </summary>
         /// <param name="cards"></param>
-        public static void PrintOpponent(Player cards)
+        public static void PrintDealer(Player cards, bool pStand)
         {
-            if (cards.stand)
+            if (cards.stand && pStand)
             {
                 Console.WriteLine($"Dealer has: {cards.BlackJackSum()}");
             }

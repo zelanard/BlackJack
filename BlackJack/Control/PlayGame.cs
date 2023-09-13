@@ -34,7 +34,7 @@ namespace BlackJack.Control
                 while (true)
                 {
                     View.View.PrintHand(playerHand.BlackJackSum());
-                    View.View.PrintOpponent(aIHand);
+                    View.View.PrintDealer(aIHand, playerHand.stand);
                     
                     //if the player have not yet stood, let them play.
                     if (!playerHand.stand)
@@ -110,7 +110,7 @@ namespace BlackJack.Control
         private void GetWinner()
         {
             View.View.PrintHand(playerHand.BlackJackSum());
-            View.View.PrintOpponent(aIHand);
+            View.View.PrintDealer(aIHand, playerHand.stand);
             //if the player have a higher score than the dealer, the player wins
             if (playerHand.BlackJackSum() > aIHand.BlackJackSum())
             {
